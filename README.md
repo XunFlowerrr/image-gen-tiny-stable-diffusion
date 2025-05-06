@@ -9,7 +9,6 @@ This project focuses on training a relatively small Stable Diffusion U-Net model
 *   **`gen_prompt_grid.py`**: Generates a grid of images based on systematically varying components of input prompts (e.g., subject, action, setting) using a specific trained checkpoint.
 *   **`prep/`**: Contains scripts for data preparation and analysis:
     *   `k-mean.py`: Performs K-Means clustering on COCO captions using sentence embeddings.
-    *   `zero.py`: Uses zero-shot classification to categorize COCO captions.
 
 ## Setup & Training:
 
@@ -17,4 +16,3 @@ This project focuses on training a relatively small Stable Diffusion U-Net model
 2.  Configure paths and training parameters (like `dataset_size`, `max_train_steps`, `save_every`) in `train_script.py`.
 3.  Run `train_script.py` to start the training process. Checkpoints and the final model will be saved under the `image-gen/model/` directory (or as configured by `ckpt_root`).
 4.  Use the generation scripts (`gen_checkpoint_evolution.py`, `gen_prompt_grid.py`) or the generation section in `train_script.py` to create images with the trained model.
-```
